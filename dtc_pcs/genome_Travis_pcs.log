@@ -1,0 +1,28 @@
+PLINK v2.0.0-a.7 64-bit (10 Jan 2026)
+Options in effect:
+  --bfile dtc_clean_genome_Travis
+  --out dtc_pcs\genome_Travis_pcs
+  --score plink/ref_pca.eigenvec.allele 2 6 header no-mean-imputation
+  --score-col-nums 7-21
+
+Hostname: LEGION
+Working directory: C:\Users\sindi\Documents1\HaploAI
+Start time: Fri Apr 10 21:53:07 2026
+
+Random number seed: 1775854387
+3737 MiB RAM detected; reserving 1868 MiB for main workspace.
+Allocated 787 MiB successfully, after larger attempt(s) failed.
+Using up to 2 compute threads.
+1 sample (0 females, 1 male; 1 founder) loaded from
+dtc_clean_genome_Travis.fam.
+180597 variants loaded from dtc_clean_genome_Travis.bim.
+Note: No phenotype data present.
+Warning: --score: 179022 entries in plink/ref_pca.eigenvec.allele were skipped
+due to missing variant IDs, and 123540 were skipped due to mismatching allele
+codes.
+(Add the 'list-variants' modifier to see which variants were actually used for
+scoring.)
+--score: 180597 variants processed.
+--score: Results written to dtc_pcs\genome_Travis_pcs.sscore .
+
+End time: Fri Apr 10 21:53:09 2026

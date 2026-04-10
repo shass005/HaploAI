@@ -1,0 +1,32 @@
+PLINK v1.9.0-b.7.11 64-bit (19 Aug 2025)
+Options in effect:
+  --bfile dtc_raw_genome_Travis
+  --exclude exclude_genome_Travis.txt
+  --extract Reference_SNPs.txt
+  --make-bed
+  --out dtc_clean_genome_Travis
+
+Hostname: LEGION
+Working directory: C:\Users\sindi\Documents1\HaploAI
+Start time: Fri Apr 10 21:52:54 2026
+
+Random number seed: 1775854374
+3737 MB RAM detected; reserving 1868 MB for main workspace.
+Allocated 787 MB successfully, after larger attempt(s) failed.
+598897 variants loaded from .bim file.
+1 person (1 male, 0 females) loaded from .fam.
+--extract: 181492 variants remaining.
+Warning: At least 181492 duplicate IDs in --extract file.
+--exclude: 180597 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1 founder and 0 nonfounders present.
+Calculating allele frequencies... done.
+Warning: 5 het. haploid genotypes present (see dtc_clean_genome_Travis.hh );
+many commands treat these as missing.
+Total genotyping rate is exactly 1.
+180597 variants and 1 person pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dtc_clean_genome_Travis.bed + dtc_clean_genome_Travis.bim +
+dtc_clean_genome_Travis.fam ... done.
+
+End time: Fri Apr 10 21:53:02 2026
