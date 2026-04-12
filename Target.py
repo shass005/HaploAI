@@ -3,6 +3,7 @@ import glob
 import subprocess
 import pandas as pd
 import numpy as np
+import json
 import streamlit as st
 from streamlit_option_menu import option_menu
 import streamlit.components.v1 as components
@@ -293,4 +294,81 @@ class Ancestry:
             }
         }
         return results
+
+class Traits:
+    # Load the Json file which contains the SNPs
+    def __init__(self, file_path, json_path="Phenotype_SNPs.json"):
+        self.file_path = file_path
+        self.json_path = json_path
+        self.user_df = None
+        self.pheno_data = None
+
+    def load_user_file(self):
+	# Get the users uploaded file
+        if not os.path.exists(self.file_path):
+            raise FileNotFoundError(f"User file not found at {self.file_path}")
+
+        # Clean the file
+        self.user_df = pd.read_csv(
+            self.file_path,
+            sep=r'\s+', 
+            comment='#',
+            header=None,
+            names=['rsid', 'chromosome', 'position', 'genotype'],
+            engine='python',
+            dtype={'rsid': str, 'genotype': str}
+        )
+        self.user_df['rsid'] = self.user_df['rsid'].str.strip()
+        self.user_df['genotype'] = self.user_df['genotype'].str.strip().str.upper()
+        
+        return self.user_df
+    
+    def load_phenotype_snps(self):
+        if self.user_df is None:
+            self.load_user_file()
+        if not os.path.exists(self.json_path):
+            raise FileNotFoundError(f"JSON file not found at {self.json_path}")
+
+        with open(self.json_path, 'r') as f:
+            self.pheno_data = json.load(f)
+        
+        for x in self.pheno_data:
+            category_name = x['name'].strip()
+            for y in x.get('children', []):
+                # Extract the trees from the JSOON
+                try:
+                    rsid = y['name'].strip()
+                    gene = y['children'][0]
+                    trait = gene['children'][0]
+                    allele = trait['children'][0]
+
+                    allele_name = allele['name'].strip().upper()
+                    gene_name = gene['name'].strip()
+                    trait_name = trait['name'].strip()
+                except AttributeError:
+                    continue
+                # Check overlap
+                match = self.user_df[self.user_df['rsid'] == rsid]
+                # Matching logic
+                if match.empty:
+                    status = -1
+                    user_gt = "--"
+                else:
+                    # count the number of matches
+                    user_gt = match.iloc[0]['genotype']
+                    count = user_gt.count(allele_name)
+                    if user_gt in ["--", "00", "II", "DD"]:
+                        status = -1
+                    else:
+                        status = count
+                y['results']={
+                    'Region': category_name,
+                    'RsID': rsid,
+                    'gene': gene_name,
+                    'trait': trait_name,
+                    'target': allele_name,
+                    'user_gt': user_gt,
+                    'status': status
+                }
+        return self.pheno_data  
 

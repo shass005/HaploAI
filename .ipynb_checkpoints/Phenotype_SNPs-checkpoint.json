@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Hair",
+    "children": [
+      {
+        "name": "rs12821256",
+        "children": [
+          {
+            "name": "KITLG",
+            "children": [
+              {
+                "name": "Blond Hair Colour",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Skin",
+    "children": [
+      {
+        "name": "rs1426654",
+        "children": [
+          {
+            "name": "SLC24A5",
+            "children": [
+              {
+                "name": "Lighter Skin Pigmentation",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Eye",
+    "children": [
+      {
+        "name": "rs12913832",
+        "children": [
+          {
+            "name": "HERC2",
+            "children": [
+              {
+                "name": "Blue vs. Brown Eye Colour",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

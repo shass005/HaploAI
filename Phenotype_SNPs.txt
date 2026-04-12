@@ -1,0 +1,23 @@
+Hair
+ rs12821256
+  KITLG
+   Blond Hair Colour
+    G
+Skin
+ rs1426654
+  SLC24A5
+   Lighter Skin Pigmentation
+    A
+ rs16891982
+  SLC45A2
+   Pale Skin
+    G
+Eye
+ rs12913832
+  HERC2
+   Brown Eye Colour
+    A
+  rs12913832
+  HERC2
+   Blue Eye Colour
+    G
