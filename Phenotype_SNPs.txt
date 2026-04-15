@@ -1,23 +1,139 @@
 Hair
  rs12821256
   KITLG
-   Blond Hair Colour
+   Blonde hair
     G
+ rs12821256
+  KITLG
+   Darker hair
+    A
+ rs3827760
+  EDAR
+   Thick/straight hair
+    A
+ rs3827760
+  EDAR
+   Less thick hair/less straight hair
+    G
+ rs17646946
+  TCHH
+   Straighter/less wavy hair texture
+    T
+ rs17646946
+  TCHH
+   Wavy/curly hair
+    C
+ rs7349332
+  IRF4
+   Lighter hair
+    A
+ rs7349332
+  IRF4
+   Darker hair 
+    G
+ rs11803731
+  FOXL2
+   This variant is associated with altered hair follicle development and structural growth characteristics
+    T
+ rs11803731
+  FOXL2
+   This variant is associated with baseline follicle development without the variant effect
+    C
+ rs12896399
+  SLC24A4
+   Lighter hair
+    G
+ rs12896399
+  SLC24A4
+   Darker hair 
+    T
 Skin
  rs1426654
   SLC24A5
-   Lighter Skin Pigmentation
+   Lighter skin pigmentation
     A
+ rs1426654
+  SLC24A5
+   Darker skin pigmentation
+    G
  rs16891982
   SLC45A2
-   Pale Skin
+   Pale skin pigmentation
     G
+ rs16891982
+  SLC45A2
+   Darker skin pigmentation
+    C
+ rs12203592
+  IRF4
+   Reduced melanin production/lighter skin pigmentation
+    T
+ rs12203592
+  IRF4
+   High melanin production/darker skin pigmentation
+    C
+ rs1800414
+  OCA2
+   RWduced melanin synthesis/lighter more pale skin tone
+    A
+ rs1800414
+  OCA2
+   Normal/higher melanin synthesis
+    G
+ rs6058017
+  ASIP
+   Lighter skin pigmentation
+    G
+ rs6058017
+  ASIP
+   Darker skin pigmentation
+    A
+ rs4911414
+  TYR
+   Reduced melanin production/lighter skin pigmentation
+    C
+ rs4911414
+  TYR
+   Inncreased melanin production/darker skin pigmentation
+    T
 Eye
  rs12913832
   HERC2
-   Brown Eye Colour
+   Brown eyes
     A
-  rs12913832
+ rs12913832
   HERC2
-   Blue Eye Colour
+   Blue eyes
     G
+ rs1800407
+  OCA2
+   Reduced melanin production/lighter eye colour
+    A
+ rs1800407
+  OCA2
+   Normal melanin levels/darker eye colour
+    G
+ rs12896399
+  SLC24A4
+   Blue to green eye colour variation
+    G
+ rs12896399
+  SLC24A4
+   Darker eye pigmentation
+    T
+ rs7495174
+  TYR
+   Reduced iris pigmentation intensity/lighter eye colour
+    C
+ rs7495174
+  TYR
+   Increased iris pigmentation intensity/darker eye colour
+    T
+ rs4778138
+  IRF4
+   Lighter eye colour/reduced melanin regulation
+    T
+ rs4778138
+  IRF4
+   Darker eye pigmentation/higher melanin regulation
+    C

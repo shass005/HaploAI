@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Health",
+    "children": [
+      {
+        "name": "rs12821256",
+        "children": [
+          {
+            "name": "KITLG",
+            "children": [
+              {
+                "name": "Blonde hair",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

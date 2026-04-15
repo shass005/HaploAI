@@ -9,10 +9,219 @@
             "name": "KITLG",
             "children": [
               {
-                "name": "Blond Hair Colour",
+                "name": "Blonde hair",
                 "children": [
                   {
                     "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs12821256",
+        "children": [
+          {
+            "name": "KITLG",
+            "children": [
+              {
+                "name": "Darker hair",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs3827760",
+        "children": [
+          {
+            "name": "EDAR",
+            "children": [
+              {
+                "name": "Thick/straight hair",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs3827760",
+        "children": [
+          {
+            "name": "EDAR",
+            "children": [
+              {
+                "name": "Less thick hair/less straight hair",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs17646946",
+        "children": [
+          {
+            "name": "TCHH",
+            "children": [
+              {
+                "name": "Straighter/less wavy hair texture",
+                "children": [
+                  {
+                    "name": "T",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs17646946",
+        "children": [
+          {
+            "name": "TCHH",
+            "children": [
+              {
+                "name": "Wavy/curly hair",
+                "children": [
+                  {
+                    "name": "C",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs7349332",
+        "children": [
+          {
+            "name": "IRF4",
+            "children": [
+              {
+                "name": "Lighter hair",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs7349332",
+        "children": [
+          {
+            "name": "IRF4",
+            "children": [
+              {
+                "name": "Darker hair",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs11803731",
+        "children": [
+          {
+            "name": "FOXL2",
+            "children": [
+              {
+                "name": "This variant is associated with altered hair follicle development and structural growth characteristics",
+                "children": [
+                  {
+                    "name": "T",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs11803731",
+        "children": [
+          {
+            "name": "FOXL2",
+            "children": [
+              {
+                "name": "This variant is associated with baseline follicle development without the variant effect",
+                "children": [
+                  {
+                    "name": "C",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs12896399",
+        "children": [
+          {
+            "name": "SLC24A4",
+            "children": [
+              {
+                "name": "Lighter hair",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs12896399",
+        "children": [
+          {
+            "name": "SLC24A4",
+            "children": [
+              {
+                "name": "Darker hair",
+                "children": [
+                  {
+                    "name": "T",
                     "children": []
                   }
                 ]
@@ -33,10 +242,29 @@
             "name": "SLC24A5",
             "children": [
               {
-                "name": "Lighter Skin Pigmentation",
+                "name": "Lighter skin pigmentation",
                 "children": [
                   {
                     "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs1426654",
+        "children": [
+          {
+            "name": "SLC24A5",
+            "children": [
+              {
+                "name": "Darker skin pigmentation",
+                "children": [
+                  {
+                    "name": "G",
                     "children": []
                   }
                 ]
@@ -52,10 +280,181 @@
             "name": "SLC45A2",
             "children": [
               {
-                "name": "Pale Skin",
+                "name": "Pale skin pigmentation",
                 "children": [
                   {
                     "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs16891982",
+        "children": [
+          {
+            "name": "SLC45A2",
+            "children": [
+              {
+                "name": "Darker skin pigmentation",
+                "children": [
+                  {
+                    "name": "C",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs12203592",
+        "children": [
+          {
+            "name": "IRF4",
+            "children": [
+              {
+                "name": "Reduced melanin production/lighter skin pigmentation",
+                "children": [
+                  {
+                    "name": "T",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs12203592",
+        "children": [
+          {
+            "name": "IRF4",
+            "children": [
+              {
+                "name": "High melanin production/darker skin pigmentation",
+                "children": [
+                  {
+                    "name": "C",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs1800414",
+        "children": [
+          {
+            "name": "OCA2",
+            "children": [
+              {
+                "name": "RWduced melanin synthesis/lighter more pale skin tone",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs1800414",
+        "children": [
+          {
+            "name": "OCA2",
+            "children": [
+              {
+                "name": "Normal/higher melanin synthesis",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs6058017",
+        "children": [
+          {
+            "name": "ASIP",
+            "children": [
+              {
+                "name": "Lighter skin pigmentation",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs6058017",
+        "children": [
+          {
+            "name": "ASIP",
+            "children": [
+              {
+                "name": "Darker skin pigmentation",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs4911414",
+        "children": [
+          {
+            "name": "TYR",
+            "children": [
+              {
+                "name": "Reduced melanin production/lighter skin pigmentation",
+                "children": [
+                  {
+                    "name": "C",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs4911414",
+        "children": [
+          {
+            "name": "TYR",
+            "children": [
+              {
+                "name": "Inncreased melanin production/darker skin pigmentation",
+                "children": [
+                  {
+                    "name": "T",
                     "children": []
                   }
                 ]
@@ -76,10 +475,181 @@
             "name": "HERC2",
             "children": [
               {
-                "name": "Blue vs. Brown Eye Colour",
+                "name": "Brown eyes",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs12913832",
+        "children": [
+          {
+            "name": "HERC2",
+            "children": [
+              {
+                "name": "Blue eyes",
                 "children": [
                   {
                     "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs1800407",
+        "children": [
+          {
+            "name": "OCA2",
+            "children": [
+              {
+                "name": "Reduced melanin production/lighter eye colour",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs1800407",
+        "children": [
+          {
+            "name": "OCA2",
+            "children": [
+              {
+                "name": "Normal melanin levels/darker eye colour",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs12896399",
+        "children": [
+          {
+            "name": "SLC24A4",
+            "children": [
+              {
+                "name": "Blue to green eye colour variation",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs12896399",
+        "children": [
+          {
+            "name": "SLC24A4",
+            "children": [
+              {
+                "name": "Darker eye pigmentation",
+                "children": [
+                  {
+                    "name": "T",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs7495174",
+        "children": [
+          {
+            "name": "TYR",
+            "children": [
+              {
+                "name": "Reduced iris pigmentation intensity/lighter eye colour",
+                "children": [
+                  {
+                    "name": "C",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs7495174",
+        "children": [
+          {
+            "name": "TYR",
+            "children": [
+              {
+                "name": "Increased iris pigmentation intensity/darker eye colour",
+                "children": [
+                  {
+                    "name": "T",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs4778138",
+        "children": [
+          {
+            "name": "IRF4",
+            "children": [
+              {
+                "name": "Lighter eye colour/reduced melanin regulation",
+                "children": [
+                  {
+                    "name": "T",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs4778138",
+        "children": [
+          {
+            "name": "IRF4",
+            "children": [
+              {
+                "name": "Darker eye pigmentation/higher melanin regulation",
+                "children": [
+                  {
+                    "name": "C",
                     "children": []
                   }
                 ]

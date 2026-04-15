@@ -9,8 +9,9 @@ from streamlit_option_menu import option_menu
 import streamlit.components.v1 as components
 from scipy.optimize import nnls as scipy_nnls
 
+# Class for processing the target file
 class TargetProcessor:
-
+    # initial the paths and create output directories
     def __init__(
         self,
         main_path="plink/ref_pca",
@@ -36,9 +37,9 @@ class TargetProcessor:
     # Get the overlapping SNPs
     def overlap_snps(self):
         print("Extracting Reference SNPs -->")
-        # Read the eigenvec.allele file and save the second column (SNP IDs) to a new file
+        # Read the eigenvec.allele file and save the second column to a new file
         ref = pd.read_csv(self.eigenallele, delim_whitespace=True)
-        # Save the second column (SNP IDs) to a new file
+        # Save the second column to a new file
         ref.iloc[:, 1].to_csv("Reference_SNPs.txt", header=False, index=False)
         print(f"Saved {len(ref)} reference SNPs.\n")
 
@@ -156,8 +157,9 @@ class TargetProcessor:
         self.normalise_pcs()
         print("Full processing pipeline completed!")
 
-
+# Class for computing the ancestry and distances
 class Ancestry:
+    # initial the paths and create output directories
     def __init__(self, user_name=None):
         self.user_name = user_name
         self.df, self.pc_cols, self.target, self.status = self.loading_data()
@@ -295,6 +297,7 @@ class Ancestry:
         }
         return results
 
+# Class for matching with the predefined traits
 class Traits:
     # Load the Json file which contains the SNPs
     def __init__(self, file_path, json_path="Phenotype_SNPs.json"):
@@ -302,7 +305,7 @@ class Traits:
         self.json_path = json_path
         self.user_df = None
         self.pheno_data = None
-
+    # Get the user file and clean it to get the rsid and genotype columns. The file should be in the format of 23andMe raw data with columns: rsid, chromosome, position, genotype. The function will return a dataframe.
     def load_user_file(self):
 	# Get the users uploaded file
         if not os.path.exists(self.file_path):
@@ -322,7 +325,7 @@ class Traits:
         self.user_df['genotype'] = self.user_df['genotype'].str.strip().str.upper()
         
         return self.user_df
-    
+    # Load the JSON file which contains the predefined traits and their associated SNPs. The function will iterate through each trait and check for overlaps with the user's genotype data. It will then add the results to the JSON and return it.
     def load_phenotype_snps(self):
         if self.user_df is None:
             self.load_user_file()
@@ -331,7 +334,8 @@ class Traits:
 
         with open(self.json_path, 'r') as f:
             self.pheno_data = json.load(f)
-        
+                        # Iterate through each tree in the category
+
         for x in self.pheno_data:
             category_name = x['name'].strip()
             for y in x.get('children', []):
@@ -371,4 +375,65 @@ class Traits:
                     'status': status
                 }
         return self.pheno_data  
+    # Do the same for the health traits
+    def get_health_results(self):
+        try:
+            # Load the  health JSON
+            with open('health_markers.json', 'r') as f:
+                health_data = json.load(f)
+
+            # Iterate through each category
+            for category in health_data:
+                category_name = category.get('name', 'Unknown').strip()
+                
+                # Iterate through each tree in the category
+                for x in category.get('children', []):
+                    try:
+                        rsid = x['name'].strip()
+                        
+                        gene_node = x['children'][0]
+                        trait_node = gene_node['children'][0]
+                        allele_node = trait_node['children'][0]
+
+                        # Extract names for display and matching
+                        gene_name = gene_node['name'].strip()
+                        trait_name = trait_node['name'].strip()
+                        allele_name = allele_node['name'].strip().upper()
+                    except (KeyError, IndexError, AttributeError):
+                        continue
+
+                    # Check overlap
+                    match = self.user_df[self.user_df['rsid'] == rsid]
+                    # Matching logic
+                    if match.empty:
+                        status = -1
+                        user_gt = "--"
+                    else:
+                        user_gt = match.iloc[0]['genotype'].upper()
+                        
+                        if user_gt in ["--", "00", "II", "DD", "??"]:
+                            status = -1
+                        else:
+                            # Count matches: 0 No Match, 1 partial and 2 full
+                            status = user_gt.count(allele_name)
+
+                    
+                    x['results'] = {
+                        'Region': category_name,
+                        'RsID': rsid,
+                        'gene': gene_name,
+                        'trait': trait_name,
+                        'target': allele_name,
+                        'user_gt': user_gt,
+                        'status': status
+                    }
+
+            return health_data
+
+        except FileNotFoundError:
+            print("Error: health_markers.json not found.")
+            return []
+        except Exception as e:
+            print(f"Error processing results: {e}")
+            return []
 

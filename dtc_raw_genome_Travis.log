@@ -1,0 +1,32 @@
+PLINK v1.9.0-b.7.11 64-bit (19 Aug 2025)
+Options in effect:
+  --23file 23andme/genome_Travis.txt
+  --make-bed
+  --out dtc_raw_genome_Travis
+
+Hostname: LEGION
+Working directory: C:\Users\sindi\Documents1\HaploAI
+Start time: Tue Apr 14 12:37:03 2026
+
+Random number seed: 1776166623
+3737 MB RAM detected; reserving 1868 MB for main workspace.
+--23file: dtc_raw_genome_Travis-temporary.bed +
+dtc_raw_genome_Travis-temporary.bim + dtc_raw_genome_Travis-temporary.fam
+written.
+4091 variants with indel calls present.  '--snps-only no-DI' or
+--list-23-indels may be useful here.
+Inferred sex: male.
+598897 variants loaded from .bim file.
+1 person (1 male, 0 females) loaded from .fam.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1 founder and 0 nonfounders present.
+Calculating allele frequencies... done.
+Warning: 123 het. haploid genotypes present (see dtc_raw_genome_Travis.hh );
+many commands treat these as missing.
+Total genotyping rate is 0.988175.
+598897 variants and 1 person pass filters and QC.
+Note: No phenotypes present.
+--make-bed to dtc_raw_genome_Travis.bed + dtc_raw_genome_Travis.bim +
+dtc_raw_genome_Travis.fam ... done.
+
+End time: Tue Apr 14 12:37:13 2026

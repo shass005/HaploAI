@@ -7,11 +7,10 @@ Options in effect:
 
 Hostname: LEGION
 Working directory: C:\Users\sindi\Documents1\HaploAI
-Start time: Sun Apr 12 12:42:17 2026
+Start time: Tue Apr 14 12:37:33 2026
 
-Random number seed: 1775994137
+Random number seed: 1776166653
 3737 MiB RAM detected; reserving 1868 MiB for main workspace.
-Allocated 1401 MiB successfully, after larger attempt(s) failed.
 Using up to 2 compute threads.
 1 sample (0 females, 1 male; 1 founder) loaded from
 dtc_clean_genome_Travis.fam.
@@ -25,4 +24,4 @@ scoring.)
 --score: 180597 variants processed.
 --score: Results written to dtc_pcs\genome_Travis_pcs.sscore .
 
-End time: Sun Apr 12 12:42:20 2026
+End time: Tue Apr 14 12:37:34 2026

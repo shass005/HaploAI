@@ -11,7 +11,7 @@ from Target import Traits
 
 tarp = TargetProcessor()
 st.set_page_config(page_title="HaploAI Dashboard", layout="wide", initial_sidebar_state="expanded")
-
+# Sidebar for navigation and theme toggle
 with st.sidebar:
     light_mode = st.toggle("Light Mode")
     # Main menu with icons    
@@ -81,14 +81,15 @@ elif selected == "Upload":
     # Ensure user has entered both a file and their name
     if uploaded_file is not None and user_name and user_name.strip():
         st.session_state['user_input_name'] = user_name.strip()
+        # Create a unique filename for the user to avoid overwriting and for better organization
         name = f"genome_{user_name.strip()}"
         os.makedirs("23andme", exist_ok=True)
         dtc_file_path = f"23andme/{name}.txt"
-        
+        # Check if the user has already processed a file to avoid redundant processing and overwriting
         if st.session_state.get('processed_user') != user_name.strip():
             with open(dtc_file_path, "wb") as f:
                 f.write(uploaded_file.getbuffer())
-
+            # Confirm upload and then start processing
             st.success("File uploaded successfully!")
             with st.spinner("Processing DNA data..."):
                 tarp.run_full_pipeline(dtc_file_path)
@@ -116,7 +117,7 @@ elif selected == "Dashboard":
             
             engine = Traits(file_path=user_file)
             pheno_results = engine.load_phenotype_snps()
-
+            health_results = engine.get_health_results()
         if anc_results:
            # First row
            # Display the profile and ancestry results
@@ -138,6 +139,7 @@ elif selected == "Dashboard":
             with top_mid:
                 st.markdown("𓉱 Ancient Ancestry")
                 ancient_data = anc_results['NNLS']['Ancient']['raw_components']
+                # If the calculation produces some meaningful results for the user
                 if ancient_data:
                     df_anc = pd.DataFrame(ancient_data)
                     fig_anc = px.pie(df_anc, values='weight', names='label', hole=0.4)
@@ -148,6 +150,7 @@ elif selected == "Dashboard":
 
             with top_right:
                 st.markdown("Profile")
+                
                 st.markdown(f"""
                     <div class="profile-card">
                         <p style="font-size: 1.1rem;"><strong>Name:</strong> <br><span style="color:#0068c9;">{user}</span></p>
@@ -169,6 +172,7 @@ elif selected == "Dashboard":
                     grid_m = st.columns(2)
                     # The page doesn't look good with too many distance results so reduce to top 5 only
                     for i, r in enumerate(anc_results["Distances"]["Modern"]["top_closest"][:5]): 
+                        
                         with grid_m[i % 2]: 
                             st.markdown(f"""
                                 <div class="modern-card">
@@ -203,16 +207,19 @@ elif selected == "Dashboard":
 
             for i, cat_name in enumerate(display_categories):
                 category_data = next((c for c in pheno_results if c['name'] == cat_name), None)
-                
+                # 
                 with pheno_cols[i]:
-                    with st.container(border=True):
+                    # The category header will include the overall prediction for the category based on the best matching marker: green for strong, yellow for partial, gray for no data
+                    with st.expander(f"{cat_name} Traits", expanded=True):
+                        # Find the best matching SNP in the category to determine the overall prediction and color coding for the category header
                         if category_data and category_data.get('children'):
                             best_match = max(category_data['children'], key=lambda x: x['results']['status'])
+                            # The overall prediction for the category is based on the best match's trait if it has a status greater than 0, otherwise it's indeterminate
                             prediction = best_match['results']['trait'] if best_match['results']['status'] > 0 else "Indeterminate"
                             bar_color = "#28a745" if best_match['results']['status'] == 2 else "#ffc107" if best_match['results']['status'] == 1 else "#6c757d"
 
                             st.markdown(f"""
-                                <div class="cat-header">
+                                <div class="cat-header" style="border-radius: 5px; margin-bottom: 10px;">
                                     <div>
                                         <p class="cat-title">{cat_name}</p>
                                         <p class="cat-prediction">Likely: {prediction}</p>
@@ -220,10 +227,12 @@ elif selected == "Dashboard":
                                     <div class="color-bar" style="background-color: {bar_color};"></div>
                                 </div>
                             """, unsafe_allow_html=True)
-
+                            # The SNP cards will be displayed in a list format under the category header, showing the RsID, gene, trait, target allele, user genotype, and a status indicator for each SNP in the category.
                             for snp in category_data['children']:
+                                # The status of the SNP determines the color coding of the card: green for strong match, yellow for partial, red for no match, gray for absent or indeterminate
                                 res = snp['results']
                                 status_cls = f"status-{res['status']}"
+                                # The text description of the match status based on the status code
                                 st_text = "Strong Match" if res['status'] == 2 else "Partial Match" if res['status'] == 1 else "No Match" if res['status'] == 0 else "SNP Absent"
 
                                 st.markdown(f"""
@@ -244,3 +253,38 @@ elif selected == "Dashboard":
                                 </div>
                                 <div style="padding: 15px;">No markers found.</div>
                             """, unsafe_allow_html=True)
+            st.markdown("---")
+            # Part 4, health traits
+            st.markdown("♡ Health Traits")
+            # Warn users
+            st.write("WANING!:This Is Not a Diagnostic Tool, Seek Professional Help for Diagnoses!")
+            with st.expander("View Health Markets", expanded=True):
+                
+                if health_results:
+                    # display cards in slots of 4
+                    health_cols = st.columns(4) 
+                    
+                    all_health_snps = []
+                    for cat in health_results:
+                        if 'children' in cat:
+                            all_health_snps.extend(cat['children'])
+                    # Sort all health SNPs by their status to show the most relevant ones first
+                    all_health_snps.sort(key=lambda x: x['results']['status'], reverse=True)
+                    for idx, snp in enumerate(all_health_snps):
+                        res = snp['results']
+                        status_cls = f"status-{res['status']}"
+                        
+                        with health_cols[idx % 3]:
+                            st.markdown(f"""
+                                <div class="snp-card {status_cls}">
+                                    <div style="display:flex; justify-content:space-between; font-size:0.7rem; opacity:0.7;">
+                                        <span>{res['RsID']}</span>
+                                        <span>{res['gene']}</span>
+                                    </div>
+                                    <div style="font-weight:bold; font-size:0.85rem; margin: 2px 0;">{res['trait']}</div>
+                                    <div style="font-size:0.7rem;">Result: {res['user_gt']}</div>
+                                </div>
+                            """, unsafe_allow_html=True)
+                else:
+                    st.warning("No health marker data found.")
+
