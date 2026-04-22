@@ -169,7 +169,7 @@ class Ancestry:
 
     def loading_data(self):
         # Load the samples data
-        df = pd.read_csv("final_out.csv")
+        df = pd.read_csv("Final_out.csv")
         # Get rid of samples with Ignore in the label
         df = df[~df["Clean_FID"].str.startswith("Ignore", na=False)]
         # Get the PC columns
