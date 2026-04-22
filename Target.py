@@ -1,5 +1,7 @@
 import os
 import glob
+import platform
+import stat
 import subprocess
 import pandas as pd
 import numpy as np
@@ -12,25 +14,26 @@ from scipy.optimize import nnls as scipy_nnls
 # Class for processing the target file
 class TargetProcessor:
     # initial the paths and create output directories
+    # Streamlit runs on linux so exe files wont work
+    # Should still be able to work on a windows if run locally
     def __init__(
         self,
         main_path="plink/ref_pca",
-        plink_exe="plink/plink1.9.exe",
-        plink2_exe="plink/plink2.exe",
         output_dir="dtc_pcs",
         normalised_dir="normalised"
     ):
-        # Paths
         self.main_path = main_path
         self.eigenallele = f"{main_path}.eigenvec.allele"
         self.eigenval_file = f"{main_path}.eigenval"
 
-        self.plink_exe = plink_exe
-        self.plink2_exe = plink2_exe
+        # Detect the OS
+        windows = platform.system() == "Windows"
+        # Set the plink file format accordingly
+        self.plink_exe = "plink/plink1.9.exe" if windows else "plink/plink"
+        self.plink2_exe = "plink/plink2.exe" if windows else "plink/plink2"
 
         self.output_dir = output_dir
         self.normalised_dir = normalised_dir
-        # Create output directories if they don't exist
         os.makedirs(self.output_dir, exist_ok=True)
         os.makedirs(self.normalised_dir, exist_ok=True)
 
