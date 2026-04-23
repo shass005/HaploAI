@@ -96,3 +96,5 @@ This section shows the proximity of the uploaded sample to the top 5 modern and 
     - Green = Strong Match
     - Yellow = Partial Match
     - Red = No Match
+![alt text](image-7.png)
+There is a warning at the top to inform users that this is not a diagnostics tool.
