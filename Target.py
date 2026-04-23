@@ -382,7 +382,7 @@ class Traits:
     def get_health_results(self):
         try:
             # Load the  health JSON
-            with open('health_markers.json', 'r') as f:
+            with open('Health_SNPs.json', 'r') as f:
                 health_data = json.load(f)
 
             # Iterate through each category
