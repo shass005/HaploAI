@@ -1,8 +1,94 @@
 Risks
- rs12821256
-  KITLG
-   Blonde hair
+ rs1805007
+  MC1R
+   UV sensitivity
+    T
+ rs4988235
+  MCM6
+   Lactose intolerance
+    C
+ rs762551
+  CYP1A2
+   Reduced caffeine metabolism
+    C
+ rs1799971
+  OPRM1
+   Increased addiction susceptibility
     G
+ rs2228570
+  VDR
+   Reduced vitamin D receptor efficiency
+    A
+ rs1801133
+  MTHFR
+   Reduced folate metabolism
+    T
+ rs429358
+  APOE
+   Alzheimer's risk
+    C
+ rs1051730
+  CHRNA3
+   Risk of nicotine dependence
+    A
+ rs6265
+  BDNF
+   Altered neuroplasticity. Associated with possible psyhchosis, obesity and memory impairement
+    A
+ rs9939609
+  FTO
+   Higher obesity risk and increased risk of Cardiovascular Disease 
+    A
+ rs7294919
+  TESC
+   Schizophrenia/Major-Depressive disorder
+    C
+ rs53576
+  OXTR
+   Reduced empathy and social skills
+    G
+ rs4680
+  COMT
+   Associated with higher activity and cognition under stress.
+    A
 Beneficial
-
-Other
+ rs1815739
+  ACTN3
+   Increased sprint performance and high intensity athletic performance.
+    C
+ rs1544410
+  VDR
+   Improved vitamin D utilisation
+    G
+ rs5882
+  CETP
+   Increased longevity and lower risk of dementia and Alzheimer's disease.
+    A
+ rs1042713
+  ADRB2
+   Associated with higher athletic endurance
+    G
+ rs2304256
+  TYK2
+   Associated with protection for different autoimmune diseases
+    C
+ rs3751812
+  FTO
+   Lower risk of obesity
+    T
+ rs11549465
+  HIF1A
+   Associated with endurance and power/Efficient management of energy under low oxygen levels 
+    T
+ rs659366
+  UCP2
+   Increased efficiency in energy metabolism
+    T
+ rs53576
+  OXTR
+   Increased empathy and social skills
+    A
+ rs4680
+  COMT
+   Associated with lower activity and cognition under stress.
+    G

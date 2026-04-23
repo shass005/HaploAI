@@ -1,15 +1,438 @@
 [
   {
-    "name": "Health",
+    "name": "Risks",
     "children": [
       {
-        "name": "rs12821256",
+        "name": "rs1805007",
         "children": [
           {
-            "name": "KITLG",
+            "name": "MC1R",
             "children": [
               {
-                "name": "Blonde hair",
+                "name": "UV sensitivity",
+                "children": [
+                  {
+                    "name": "T",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs4988235",
+        "children": [
+          {
+            "name": "MCM6",
+            "children": [
+              {
+                "name": "Lactose intolerance",
+                "children": [
+                  {
+                    "name": "C",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs762551",
+        "children": [
+          {
+            "name": "CYP1A2",
+            "children": [
+              {
+                "name": "Reduced caffeine metabolism",
+                "children": [
+                  {
+                    "name": "C",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs1799971",
+        "children": [
+          {
+            "name": "OPRM1",
+            "children": [
+              {
+                "name": "Increased addiction susceptibility",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs2228570",
+        "children": [
+          {
+            "name": "VDR",
+            "children": [
+              {
+                "name": "Reduced vitamin D receptor efficiency",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs1801133",
+        "children": [
+          {
+            "name": "MTHFR",
+            "children": [
+              {
+                "name": "Reduced folate metabolism",
+                "children": [
+                  {
+                    "name": "T",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs429358",
+        "children": [
+          {
+            "name": "APOE",
+            "children": [
+              {
+                "name": "Alzheimer's risk",
+                "children": [
+                  {
+                    "name": "C",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs1051730",
+        "children": [
+          {
+            "name": "CHRNA3",
+            "children": [
+              {
+                "name": "Risk of nicotine dependence",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs6265",
+        "children": [
+          {
+            "name": "BDNF",
+            "children": [
+              {
+                "name": "Altered neuroplasticity. Associated with possible psyhchosis, obesity and memory impairement",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs9939609",
+        "children": [
+          {
+            "name": "FTO",
+            "children": [
+              {
+                "name": "Higher obesity risk and increased risk of Cardiovascular Disease",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs7294919",
+        "children": [
+          {
+            "name": "TESC",
+            "children": [
+              {
+                "name": "Schizophrenia/Major-Depressive disorder",
+                "children": [
+                  {
+                    "name": "C",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs53576",
+        "children": [
+          {
+            "name": "OXTR",
+            "children": [
+              {
+                "name": "Reduced empathy and social skills",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs4680",
+        "children": [
+          {
+            "name": "COMT",
+            "children": [
+              {
+                "name": "Associated with higher activity and cognition under stress.",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Beneficial",
+    "children": [
+      {
+        "name": "rs1815739",
+        "children": [
+          {
+            "name": "ACTN3",
+            "children": [
+              {
+                "name": "Increased sprint performance and high intensity athletic performance.",
+                "children": [
+                  {
+                    "name": "C",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs1544410",
+        "children": [
+          {
+            "name": "VDR",
+            "children": [
+              {
+                "name": "Improved vitamin D utilisation",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs5882",
+        "children": [
+          {
+            "name": "CETP",
+            "children": [
+              {
+                "name": "Increased longevity and lower risk of dementia and Alzheimer's disease.",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs1042713",
+        "children": [
+          {
+            "name": "ADRB2",
+            "children": [
+              {
+                "name": "Associated with higher athletic endurance",
+                "children": [
+                  {
+                    "name": "G",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs2304256",
+        "children": [
+          {
+            "name": "TYK2",
+            "children": [
+              {
+                "name": "Associated with protection for different autoimmune diseases",
+                "children": [
+                  {
+                    "name": "C",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs3751812",
+        "children": [
+          {
+            "name": "FTO",
+            "children": [
+              {
+                "name": "Lower risk of obesity",
+                "children": [
+                  {
+                    "name": "T",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs11549465",
+        "children": [
+          {
+            "name": "HIF1A",
+            "children": [
+              {
+                "name": "Associated with endurance and power/Efficient management of energy under low oxygen levels",
+                "children": [
+                  {
+                    "name": "T",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs659366",
+        "children": [
+          {
+            "name": "UCP2",
+            "children": [
+              {
+                "name": "Increased efficiency in energy metabolism",
+                "children": [
+                  {
+                    "name": "T",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs53576",
+        "children": [
+          {
+            "name": "OXTR",
+            "children": [
+              {
+                "name": "Increased empathy and social skills",
+                "children": [
+                  {
+                    "name": "A",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rs4680",
+        "children": [
+          {
+            "name": "COMT",
+            "children": [
+              {
+                "name": "Associated with lower activity and cognition under stress.",
                 "children": [
                   {
                     "name": "G",
