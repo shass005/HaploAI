@@ -71,7 +71,7 @@ with st.sidebar:
 # Home page
 if selected == "Home":
     st.title("Home")
-    st.write("Welcome to HaploAI..... To use the service, upload your file in the Upload tab and check the Dashboard for your results.")    
+    st.write("Welcome to HaploAI, a bioinformatics tool that allows you to gain deeper insights form your 23andMe data. To use the service, upload your file in the Upload tab and check the Dashboard for your results.")    
 # Upload page
 elif selected == "Upload":
     st.title("Upload")
@@ -81,7 +81,7 @@ elif selected == "Upload":
     # Ensure user has entered both a file and their name
     if uploaded_file is not None and user_name and user_name.strip():
         st.session_state['user_input_name'] = user_name.strip()
-        # Create a unique filename for the user to avoid overwriting and for better organization
+        # Use the user's name to create a unique filename for their uploaded data to avoid overwriting and to associate the file with the user in future sessions
         name = f"genome_{user_name.strip()}"
         os.makedirs("23andme", exist_ok=True)
         dtc_file_path = f"23andme/{name}.txt"
@@ -150,7 +150,7 @@ elif selected == "Dashboard":
 
             with top_right:
                 st.markdown("Profile")
-                
+        
                 st.markdown(f"""
                     <div class="profile-card">
                         <p style="font-size: 1.1rem;"><strong>Name:</strong> <br><span style="color:#0068c9;">{user}</span></p>
@@ -227,9 +227,9 @@ elif selected == "Dashboard":
                                     <div class="color-bar" style="background-color: {bar_color};"></div>
                                 </div>
                             """, unsafe_allow_html=True)
-                            # The SNP cards will be displayed in a list format under the category header, showing the RsID, gene, trait, target allele, user genotype, and a status indicator for each SNP in the category.
+                            # The marker cards will be displayed in a list format under the category header, showing the, gene, trait, target allele, user genotype, and a status indicator for each SNP in the category.
                             for snp in category_data['children']:
-                                # The status of the SNP determines the color coding of the card: green for strong match, yellow for partial, red for no match, gray for absent or indeterminate
+                                # The status of the marker determines the color coding of the card: green for strong match, yellow for partial, red for no match, gray for absent or indeterminate
                                 res = snp['results']
                                 status_cls = f"status-{res['status']}"
                                 # The text description of the match status based on the status code
@@ -270,7 +270,9 @@ elif selected == "Dashboard":
                             all_health_snps.extend(cat['children'])
                     # Sort all health SNPs by their status to show the most relevant ones first
                     all_health_snps.sort(key=lambda x: x['results']['status'], reverse=True)
+                    # Display each health SNP as a card with color coding based on the status, similar to the phenotypical traits
                     for idx, snp in enumerate(all_health_snps):
+                        # 
                         res = snp['results']
                         status_cls = f"status-{res['status']}"
                         
@@ -286,5 +288,5 @@ elif selected == "Dashboard":
                                 </div>
                             """, unsafe_allow_html=True)
                 else:
-                    st.warning("No health marker data found.")
+                    st.warning("No health data found.")
 

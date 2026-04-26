@@ -308,6 +308,7 @@ class Traits:
         self.json_path = json_path
         self.user_df = None
         self.pheno_data = None
+    
     # Get the user file and clean it to get the rsid and genotype columns. The file should be in the format of 23andMe raw data with columns: rsid, chromosome, position, genotype. The function will return a dataframe.
     def load_user_file(self):
 	# Get the users uploaded file
@@ -328,6 +329,7 @@ class Traits:
         self.user_df['genotype'] = self.user_df['genotype'].str.strip().str.upper()
         
         return self.user_df
+    
     # Load the JSON file which contains the predefined traits and their associated SNPs. The function will iterate through each trait and check for overlaps with the user's genotype data. It will then add the results to the JSON and return it.
     def load_phenotype_snps(self):
         if self.user_df is None:
@@ -364,6 +366,7 @@ class Traits:
                     # count the number of matches
                     user_gt = match.iloc[0]['genotype']
                     count = user_gt.count(allele_name)
+                    # Get the users genotype. If missing, indeterminate, or has no match with the target allele set the status to -1, else set the status to the count 0, 1, or 2  
                     if user_gt in ["--", "00", "II", "DD"]:
                         status = -1
                     else:
@@ -378,6 +381,7 @@ class Traits:
                     'status': status
                 }
         return self.pheno_data  
+    
     # Do the same for the health traits
     def get_health_results(self):
         try:
@@ -413,7 +417,6 @@ class Traits:
                         user_gt = "--"
                     else:
                         user_gt = match.iloc[0]['genotype'].upper()
-                        
                         if user_gt in ["--", "00", "II", "DD", "??"]:
                             status = -1
                         else:

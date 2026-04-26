@@ -18,6 +18,9 @@ A Python-based bioinformatics tool built with Streamlit that allows users to upl
 - Users upload a text file. The system filters for overlapping SNPs between the user data and the reference panel.
 - Duplicate markers and low-quality ones are removed automatically to ensure accuracy.
 - PCA is calculated to project the user onto a reference map.
+### Ancestry Results
+- User gets personalised ancestry results divided into modern and ancient
+- User also gets results showing closest modern and ancient populations
 
 ### Health/Phenotype Analysis
 - Every marker in the users .txt file is checked against a database of known markers.
@@ -97,4 +100,7 @@ This section shows the proximity of the uploaded sample to the top 5 modern and 
     - Yellow = Partial Match
     - Red = No Match
 ![alt text](image-7.png)
-There is a warning at the top to inform users that this is not a diagnostics tool.
+- There is a warning at the top to inform users that this is not a diagnostics tool.
+### Limitations
+- The profile section in the dashboard has hardcoded vaues for the YDNA and mtDNA, these couldn't be implemented.
+- The main aim of this project was to determine whether consuer genetic data from 23andMe could be integrated with academic datasets despite their mismatch, though I have succeded in doing this, some accuracy is lost in the ancestry results due to the mismatch.
