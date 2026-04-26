@@ -47,7 +47,8 @@ https://haplo-ai.streamlit.app/
 
 
 3. Navigate to the upload page. You can upload your own file if you have it. Otherwise, if you'd like to test it out, you can use on of the three test files in the **"Test_Files"** folder.
-![alt text](image.png)
+
+    ![alt text](image.png)
 
 4. Enter your name and upload the file, whether your own or one of the test files. You will initially see a success message if you've uploaded correctly. The file will then process displaying a processing message before a success message once complete.
 ![alt text](image-1.png)
